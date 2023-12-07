@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;400&family=Noto+Sans:wght@500&family=Patrick+Hand&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive !important;
+    font-family: 'Lexend', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+} */
+
+body {
+    background-image: url(background.svg); 
+    background-size: 120%;
+    /* background-size: cover; */
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    animation: example ease-in-out infinite alternate;
+    animation-duration: 5s;
+    color: white;
+}
+
+@keyframes example {
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: right center;
+    }
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+}
+
+.card-body {
+    color: black;
+}
+
+.note-title {
+    direction: ltr;
+    font-size: 1.5rem;
+}
+.note-body {
+    direction: ltr;
+}
+.container-fluid {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* notification toast */
+.toast {
+    position: fixed;
+    border: none; 
+    max-width: fit-content;
+    z-index: 11; 
+    bottom: 0; 
+    right: 0; 
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(166,232,33,1);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(166,232,33,1);
+    box-shadow: 0px 0px 10px 3px rgba(166,232,33,1);
+}
+.toast-header {
+    border-bottom: none;
+}
+.toast-header strong {
+    font-size: 1.5rem;
+}
+.toast-body p {
+    font-size: 1.2rem;
+}
+
+.progress {
+    background-color: lime;
+    height: 5px !important;
+    width: 0;
+    animation: progress 3s linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+/* notification toas end */
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-size: cover;
+    }
+    .container-fluid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        width: 90% !important;
+    }
+    .toast-header strong {
+        font-size: 1.2rem;
+    }
+    .toast-body p {
+        font-size: 1rem;
+    }
+}

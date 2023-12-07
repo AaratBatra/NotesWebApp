@@ -1,0 +1,15 @@
+<% if(notes.length != 0) {%>
+<% notes.forEach(element => {  %>
+<div class="card mx-auto" style="width: 80%; height: fit-content;" id="<%= element.id %>">
+  <div class="card-body">
+    <div contenteditable="true" aria-multiline="true" role="textbox" class="card-title note-title" dir="ltr" tabindex="0" spellcheck="true"><%= element.title %></div>
+    <!-- <h5 class="card-title"></h5> -->
+    <p class="card-id" aria-hidden="true" hidden="true"><%= element.id %></p>
+    <h6 class="card-subtitle mb-2 text-muted"><%= element.date.toLocaleDateString() %></h6>
+    <div contenteditable="true" aria-multiline="true" role="textbox" class="card-text note-body" dir="ltr" tabindex="0" spellcheck="true"><%= element.body %></div>
+    <br>
+    <button type="button" class="card-link btn btn-outline-danger" id="liveToastBtn" onclick="deleteNote(this)">Delete</button>
+    <button type="button" class="card-link btn btn-outline-primary" id="liveToastBtn" onclick="updateNote(this)">Update</button>
+  </div>
+</div>
+<% })}; %>

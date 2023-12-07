@@ -1,0 +1,14 @@
+<form action="/notes" method="POST">  
+<div class="card mx-auto" style="width: 80%">
+    <div class="card-body">
+      <h3 class="card-title text-center">Create a Note</h3>
+      <label for="todo-title">Title</label>
+      <input class="form-control" id="todo-title" type="text" name="title" required>
+      <div class="form-group">
+        <label for="todo-description">Description</label>
+        <textarea class="form-control" id="todo-description" rows="3" name="body"></textarea>
+      </div>
+      <button onclick="check()" type="submit" class="card-link btn btn-outline-success">Add +</button>
+    </div>
+  </div>
+</form>

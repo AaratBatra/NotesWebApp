@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;400&family=Noto+Sans:wght@500&family=Patrick+Hand&family=Roboto&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/* colors border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+*/
+:root {
+  --benefits-green: #37fff4;
+  --offer-cyan: #00f8ea;
+  --talk-black: #191a23;
+  --benefits-bg: rgba(243, 243, 243, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Patrick Hand", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.benefits {
+  width: 100%;
+}
+
+.benefits-heading {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  padding: 0 8%;
+}
+
+.benefits-heading > h1 {
+  background-color: var(--benefits-green);
+  border-radius: 7px;
+  padding: 0px 7px;
+}
+
+.benefits-heading > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.benefits-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 65px;
+  row-gap: 80px;
+  margin-top: 65px;
+  padding: 0 8%;
+}
+
+.benefits-card {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  background: #f3f3f3;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.13));
+}
+
+.benefits-card:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -41px;
+  width: 82px;
+  height: 82px;
+  border-radius: 100%;
+  background: #f3f3f3;
+}
+
+.benefits-card-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  top: -39px;
+  width: 78px;
+  height: 78px;
+  border-radius: 100%;
+  background: #37fff4;
+}
+
+.benefits-card > p {
+  color: #000;
+  text-align: center;
+  font-family: Space Grotesk;
+  font-size: 22.222px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 135% */
+  text-transform: capitalize;
+}
+
+/* benefits secured div */
+.secured {
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  height: 480px;
+  padding: 0 8%;
+  overflow: hidden;
+}
+.secured-left {
+  width: 50%;
+}
+.left-card {
+  height: 100%;
+  background-color: var(--benefits-green);
+  width: 100%;
+  border-radius: 33px;
+  box-shadow: 5px 5px 0px 0px #191a23;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.left-card p {
+  width: fit-content;
+  padding: 0 14.6px;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.left-card > a {
+  margin-top: 61px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  gap: 15px;
+}
+
+.secured-right {
+  height: 100%;
+  margin-top: 100px;
+  width: 50%;
+  padding: 0 8%;
+}
+
+.secured-right > h1 {
+  background-color: var(--benefits-green);
+  border-radius: 7px;
+  padding: 0px 7px;
+  width: fit-content;
+}
+
+.secured-right > p {
+  margin-top: 25px;
+  color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* benefits end */
+
+/* offers */
+.offer {
+  margin-top: 35px;
+  width: 100%;
+  padding-left: 8%;
+}
+
+.offer-heading {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.offer-heading > h1 {
+  background-color: var(--benefits-green);
+  border-radius: 7px;
+  padding: 0px 7px;
+}
+
+.offer-heading > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.offer-content {
+  display: flex;
+  width: 100%;
+}
+
+.offer-left {
+  width: 50%;
+}
+
+.offer-left-list {
+  margin-bottom: 20px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  gap: 21px;
+  width: 100%;
+  height: 120px;
+  padding: 4% 2%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  transition: height ease 0.3s;
+}
+
+.offer-left-list > h1 {
+  color: #252525;
+  font-family: Space Grotesk;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 47.7px; /* 159% */
+}
+
+.offer-list-img {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+}
+
+.offer-left-list h1 {
+  font-size: 2rem;
+}
+
+.offer-left-list.active {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  border-radius: 23px;
+  background: #fff;
+  box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.25);
+  padding: 2% 2%;
+}
+
+.offer-left-list.active h1 {
+  color: #00f8ea;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 47.7px; /* 159% */
+}
+
+.offer-left-list.active .offer-list-p {
+  display: block;
+}
+
+.offer-list-p {
+  display: none;
+}
+
+.offer-right {
+  width: 50%;
+}
+
+.offer-right > svg {
+  float: right;
+}
+
+/* offer section end */
+/* company section start */
+.talk {
+  padding: 0 8%;
+  width: 100% !important;
+}
+
+.talk-heading {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.talk-heading > h1 {
+  background-color: var(--benefits-green);
+  border-radius: 7px;
+  padding: 0px 7px;
+}
+
+.talk-heading > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.talk-content {
+  display: flex;
+  gap: 30px;
+  background-color: #000;
+  border-radius: 48px;
+  width: 100%;
+  height: auto;
+  padding: 2% 4%;
+}
+
+.talk-content-left {
+  color: white;
+  width: 50%;
+}
+
+.talk-content-left .company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.talk-content-left > p {
+  color: #fff;
+  font-family: Space Grotesk;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.company-grid .company-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
+  filter: drop-shadow(
+    1.7064388990402222px 1.7064388990402222px 3.4128777980804443px
+      rgba(0, 0, 0, 0.21)
+  );
+}
+
+.talk-content-right {
+  background-color: white;
+  width: 50%;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 1000px) {
+  /* benefits start */
+  .benefits-heading {
+    flex-direction: column;
+  }
+  .benefits-heading > p {
+    text-align: center;
+  }
+  .benefits-cards {
+    grid-template-columns: 1fr;
+    margin-top: 65px;
+  }
+  .secured {
+    padding: 0;
+    gap: 0;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+  .secured-left {
+    width: 100%;
+    height: 300px;
+  }
+  .left-card {
+    padding-left: 8%;
+    padding-top: 15%;
+    height: auto;
+    padding-bottom: 5%;
+    width: 96%;
+    margin: 0 auto;
+  }
+  .left-card p {
+    font-size: 2.5rem;
+  }
+  .secured-right {
+    width: auto;
+  }
+  .secured-right > p {
+    text-align: center;
+  }
+  .secured-right > h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* benefits end */
+
+  /* offer start */
+  .offer {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 3%;
+  }
+
+  .offer-left-list.active {
+    /* margin-bottom: 20px; */
+    height: 240px;
+  }
+  .offer-heading {
+    flex-direction: column;
+  }
+  .offer-left {
+    width: 100%;
+  }
+  .offer-left-list h1 {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+  .offer-left-list.active h1 {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+  .offer-right {
+    display: none;
+  }
+  .offer-content {
+    flex-direction: column;
+    padding: 0;
+  }
+  .offer-heading > p {
+    text-align: center;
+  }
+  /* offer end */
+
+  /* talk start */
+  .talk {
+    padding: 0;
+  }
+  .talk-heading {
+    flex-direction: column;
+  }
+  .talk-heading > h1 {
+    margin: 0 auto;
+  }
+  .talk-heading > p {
+    text-align: center;
+  }
+  .talk-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .talk-content-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: auto;
+    padding-right: auto;
+  }
+  .talk-content-left > p {
+    text-align: center;
+  }
+  .company-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .talk-content-right {
+    
+    width: 100%;
+    height: 500px;
+  }
+  
+  /* talk section end */
+}
