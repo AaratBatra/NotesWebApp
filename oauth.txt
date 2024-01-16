@@ -1,2 +1,1 @@
-client_ID = 101743729754-l9o8n0uu3dcv7fp1lhee7fg35921ft09.apps.googleusercontent.com
-client_secret = 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
+b
