@@ -47,7 +47,7 @@ userRouter.post("/login", async (req,res)=> {
             // check the password if they match or not
             const passwordMatch = await bcrypt.compare(data.password, founduser.password);
             if (passwordMatch) {
-                const token = jwt.sign({ userId: founduser._id, email: founduser.email }, process.env.secret_key);
+                const token = jwt.sign({ userId: founduser._id, email: founduser.email }, process.env.secret_key, {expiresIn: '48h'});
                 const userId = founduser._id;
                 // Send the token as a response or store it in a cookie
                 res.cookie(`token`, token)
