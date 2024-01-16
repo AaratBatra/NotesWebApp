@@ -51,6 +51,15 @@ Make sure you have the following installed:
    secret_key = [Your Secret Key]
    ```
 
+## Usage
+
+1. Start the server
+```bash
+   npm run start
+```
+2. In your browser navigate to (http://localhost:4000/users/register) and register with some fake or real credentials then login
+3. After login, you should be redirected to /notes where you can do CRUD with your notes
+
 ## Technologies Used
 
 - Node.js
